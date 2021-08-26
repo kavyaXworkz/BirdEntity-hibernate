@@ -1,0 +1,1 @@
+# BirdEntity-hibernate
