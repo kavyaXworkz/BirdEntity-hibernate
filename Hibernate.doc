@@ -1,0 +1,49 @@
+SessionFactory
+ ---- Session	openSession()
+          Create database connection and open a Session on it.
+ Session	openSession(Connection connection)
+          Open a Session on the given connection.
+ void	close()
+          Destroy this SessionFactory and release all resources (caches, connection pools, etc).
+		  
+Transaction beginTransaction()
+Begin a unit of work and return the associated Transaction object.
+
+Connection close()
+End the session by releasing the JDBC connection and cleaning up.
+
+Criteria createCriteria(Class persistentClass)
+Create a new Criteria instance, for the given entity class, or a superclass of an entity class.
+
+Criteria createCriteria(String entityName)
+Create a new Criteria instance, for the given entity name.
+	
+Query createQuery(String queryString)
+Create a new instance of Query for the given HQL query string.
+	
+SQLQuery createSQLQuery(String queryString)
+Create a new instance of SQLQuery for the given SQL query string.
+	
+void delete(Object object)
+Remove a persistent instance from the datastore.
+
+void delete(String entityName, Object object)
+Remove a persistent instance from the datastore.
+
+Session get(String entityName, Serializable id)
+Return the persistent instance of the given named entity with the given identifier, or null if there is no such persistent instance.
+
+SessionFactory getSessionFactory()
+Get the session factory which created this session.
+
+Transaction getTransaction()
+Get the Transaction instance associated with this session.
+	
+Serializable save(Object object)
+Persist the given transient instance, first assigning a generated identifier.
+
+void update(Object object)
+Update the persistent instance with the identifier of the given detached instance.
+	
+void update(String entityName, Object object)
+Update the persistent instance with the identifier of the given detached instance.
